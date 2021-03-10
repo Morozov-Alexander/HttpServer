@@ -1,8 +1,8 @@
 import socket
 import yaml
-import os
-import re
 import json
+from loger import *
+
 class MyHttpServer:
     __slots__ = ('_domain', '_port', '_path', 'server_socket')
 
@@ -10,7 +10,8 @@ class MyHttpServer:
         self._domain = domain
         self._port = port
         self._path = path
-
+   
+    @ParseRequelstDecor
     def parseRequest(self,request):
         request = request.split(' ')
         return request[0], request[1][1:] 
@@ -21,15 +22,11 @@ class MyHttpServer:
                    'jpeg': 'image'}  
         try:
             type1 = path.split(".")[-1]
-            print(type1)
             file = open(path,'rb') # open file , r => read , b => byte format
             response = file.read()
             file.close()
-            print("File - OK")
             mimetype = file_type[type1] + "/" +type1 
-            print("mimetype - OK")
             header = 'HTTP/1.0 200 OK\r\n' + 'Content-Type:' + mimetype + "\r\n\r\n"
-            print("header - OK")
         except:
             header = 'HTTP/1.1 404 Not Found\n\n'
             response = '<html><body><center><h3>Error 404: File not found</h3><p>Python HTTP Server</p></center></body></html>'.encode('utf-8')
@@ -60,18 +57,16 @@ class MyHttpServer:
         response = 'HTTP/1.0 200 OK\r\n' + 'Content-Type: text/html\r\n\r\n' + json.dumps(answer)
         return response.encode('utf-8') 
 
-
+    @ResponseDecor
     def makeResponse(self,request):
         method, new_path = self.parseRequest(request.decode('utf-8'))
         final_response = ""
-        print(method, "  ",new_path)
         if method == "GET":
             final_response = self.generateGetRequest(new_path)
         elif method == 'OPTIONS':
             final_response = 'Allow: OPTIONS, GET, POST'.encode('utf-8') 
         elif method == 'POST':
             final_response = self.generatePostRequest(request)
-            print(final_response)
         return final_response
 
     def run(self)->None:
@@ -82,7 +77,6 @@ class MyHttpServer:
                 while True:
                     client_socket, addres = s.accept()
                     request = client_socket.recv(1024)
-                    print({addres})
                     if not request:
                         break
                     response = self.makeResponse(request)

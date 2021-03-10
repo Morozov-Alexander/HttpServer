@@ -1,0 +1,33 @@
+Get request at 2021-03-10 22:33:35.999759
+Type of Request - GET . To adress - test_data/1.jhtml
+Status of Request - HTTP/1.1 404 Not Found
+Sent request at 2021-03-10 22:33:36.000314
+Get request at 2021-03-10 22:33:41.285813
+Type of Request - GET . To adress - test_data/1.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-10 22:33:41.286216
+Get request at 2021-03-10 22:34:12.191010
+Type of Request - POST . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-10 22:34:12.193311
+
+Get request at 2021-03-10 22:34:23.952066
+Type of Request - POST . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-10 22:34:23.953378
+
+Get request at 2021-03-10 22:34:31.464659
+Type of Request - POST . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-10 22:34:31.465635
+
+Get request at 2021-03-10 22:34:34.837824
+Type of Request - GET . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-10 22:34:34.838092
+
+Get request at 2021-03-10 22:34:45.083546
+Type of Request - POST . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-10 22:34:45.085972
+
