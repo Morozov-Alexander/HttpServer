@@ -11,23 +11,6 @@ class MyHttpServer:
         self._port = port
         self._path = path
 
-    @property
-    def domain(self):
-        return self._domain
-
-    @domain.setter
-    def domain(self, value):
-        self._domain = value
-
-    @property
-    def port(self):
-        return self._port
-
-    @port.setter
-    def port(self, value):
-        if isinstance(value, int):
-            self._port = value
-
     def parseRequest(self,request):
         request = request.split(' ')
         return request[0], request[1][1:] 
