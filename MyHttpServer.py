@@ -2,6 +2,7 @@ import socket
 import yaml
 import os
 import re
+import json
 class MyHttpServer:
     __slots__ = ('_domain', '_port', '_path', 'server_socket')
 
@@ -54,17 +55,40 @@ class MyHttpServer:
         final_response = header.encode('utf-8') + response
         return final_response
 
-    def makeResponse(self,request):
-        print(request)
-        method, new_path = self.parseRequest(request.decode('utf-8'))
+    def getInfoToYML(self, info_list):
+        map1 ={}
+        for i in info_list:
+            param = i.split('=')
+            map1[param[0]] = param[1]
+        return map1
 
-        print(method, "  ",new_path)
+    def saveYML(self, info_list):
+    
+        to_yaml = self.getInfoToYML(info_list)
+
+        with open('POSTInfo.yaml', 'w') as f:
+            yaml.dump(to_yaml, f)
+        return to_yaml
+
+    def generatePostRequest(self,params):
+        kv_params = params.split()[-1].decode('utf-8')
+        kv_params= kv_params.split('&')
+        answer  = self.saveYML(kv_params)
+        response = 'HTTP/1.0 200 OK\r\n' + 'Content-Type: text/html\r\n\r\n' + json.dumps(answer)
+        return response.encode('utf-8') 
+
+
+    def makeResponse(self,request):
+        method, new_path = self.parseRequest(request.decode('utf-8'))
         final_response = ""
+        print(method, "  ",new_path)
         if method == "GET":
             final_response = self.generateGetRequest(new_path)
         elif method == 'OPTIONS':
-            response = 'Allow: OPTIONS, GET, POST'.encode()    
-        # elif method == 'GET':
+            final_response = 'Allow: OPTIONS, GET, POST'.encode('utf-8') 
+        elif method == 'POST':
+            final_response = self.generatePostRequest(request)
+            print(final_response)
         return final_response
 
     def run(self)->None:
@@ -79,4 +103,4 @@ class MyHttpServer:
                     if not request:
                         break
                     response = self.makeResponse(request)
-                    client_socket.sendall(response)
+                    client_socket.send(response)
