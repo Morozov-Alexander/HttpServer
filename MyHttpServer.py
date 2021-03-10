@@ -27,12 +27,26 @@ class MyHttpServer:
         if isinstance(value, int):
             self._port = value
 
-    # @my_logger
-    # def get_url_method(self, request):
-    #     parsed = request.split(' ')
-    #     method = parsed[0]
-    #     url = parsed[1]
-    #     return method, url
+    def makeResponse(self,request):
+        type, new_path = self.parseRequest(request)
+        try:
+            file = open("index.html",'rb') # open file , r => read , b => byte format
+            response = file.read()
+            file.close()
+ 
+            header = 'HTTP/1.1 200 OK\n'
+            mimetype = 'text/html'
+ 
+            header += 'HTTP/1.0 200 OK\r\n' + 'Content-Type: text/html\r\n\r\n' 
+ 
+        except Exception as e:
+            header = 'HTTP/1.1 404 Not Found\n\n'
+            response = '<html><body><center><h3>Error 404: File not found</h3><p>Python HTTP Server</p></center></body></html>'.encode('utf-8')
+ 
+
+        final_response = header.encode('utf-8')
+        final_response += response
+        return final_response
 
     def run(self)->None:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s: #ipv_4 tcp
@@ -41,38 +55,8 @@ class MyHttpServer:
             while True:
                 client_socket, addres = s.accept()
                 request = client_socket.recv(1024)
-                # if not request:
-                #     break
-                response = "hello"
                 print({addres})
-                client_socket.send(bytes(response,"utf-8"))
                 #client_socket.sendall(response)
-
-
-    def generateGetResponse():
-        try:
-            file = open("index.html",'rb') # open file , r => read , b => byte format
-            response = file.read()
-            file.close()
- 
-            header = 'HTTP/1.1 200 OK\n'
- 
-            if(myfile.endswith(".jpg")):
-                mimetype = 'image/jpg'
-            elif(myfile.endswith(".css")):
-                mimetype = 'text/css'
-            else:
-                mimetype = 'text/html'
- 
-            header += 'Content-Type: '+str(mimetype)+'<strong>\n\n</strong>'
- 
-        except Exception as e:
-            header = 'HTTP/1.1 404 Not Found\n\n'
-            response = '<html>
-                          <body>
-                            <center>
-                             <h3>Error 404: File not found</h3>
-                             <p>Python HTTP Server</p>
-                            </center>
-                          </body>
-                        </html>'.encode('utf-8')
+                print(request)
+                response = self.makeResponse(request)
+                client_socket.send(response)
