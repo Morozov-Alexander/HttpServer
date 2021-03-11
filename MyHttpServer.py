@@ -74,10 +74,9 @@ class MyHttpServer:
             s.bind((self._domain, self._port))
             s.listen()
             while True:
-                while True:
-                    client_socket, addres = s.accept()
-                    request = client_socket.recv(1024)
-                    if not request:
-                        break
-                    response = self.makeResponse(request)
-                    client_socket.send(response)
+                client_socket, addres = s.accept()
+                request = client_socket.recv(1024)
+                if not request:
+                    continue
+                response = self.makeResponse(request)
+                client_socket.send(response)

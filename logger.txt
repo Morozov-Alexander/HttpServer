@@ -31,3 +31,83 @@ Type of Request - POST . To adress - index.html
 Status of Request - HTTP/1.0 200 OK
 Sent request at 2021-03-10 22:34:45.085972
 
+Get request at 2021-03-11 08:46:13.105940
+Type of Request - GET . To adress - favicon.ico
+Status of Request - HTTP/1.1 404 Not Found
+Sent request at 2021-03-11 08:46:13.106250
+
+Get request at 2021-03-11 08:46:37.901782
+Type of Request - GET . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-11 08:46:37.904134
+
+Get request at 2021-03-11 08:47:10.947199
+Type of Request - POST . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-11 08:47:10.948394
+
+Get request at 2021-03-11 08:47:32.806524
+Type of Request - GET . To adress - index.htmld
+Status of Request - HTTP/1.1 404 Not Found
+Sent request at 2021-03-11 08:47:32.806829
+
+Get request at 2021-03-11 08:48:04.513108
+Type of Request - GET . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-11 08:48:04.513440
+
+Get request at 2021-03-11 08:48:08.219882
+Type of Request - POST . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-11 08:48:08.220694
+
+Get request at 2021-03-11 08:48:18.608541
+Type of Request - GET . To adress - test_data/1.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-11 08:48:18.608903
+
+Get request at 2021-03-11 08:50:19.047186
+Type of Request - POST . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-11 08:50:19.048467
+
+Get request at 2021-03-11 08:50:19.569450
+Type of Request - GET . To adress - favicon.ico
+Status of Request - HTTP/1.1 404 Not Found
+Sent request at 2021-03-11 08:50:19.570333
+
+Get request at 2021-03-11 08:50:22.486912
+Type of Request - GET . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-11 08:50:22.487261
+
+Get request at 2021-03-11 08:50:36.050223
+Type of Request - POST . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-11 08:50:36.051121
+
+Get request at 2021-03-11 08:50:42.787256
+Type of Request - GET . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-11 08:50:42.787433
+
+Get request at 2021-03-11 08:51:06.913190
+Type of Request - GET . To adress - test_data/1.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-11 08:51:06.913462
+
+Get request at 2021-03-11 08:51:16.693330
+Type of Request - GET . To adress - test_data/1.jpg
+Status of Request - HTTP/1.0 200 OK - send Photo
+Sent request at 2021-03-11 08:51:16.694598
+
+Get request at 2021-03-11 08:51:29.600379
+Type of Request - GET . To adress - test_data/2.jpg
+Status of Request - HTTP/1.1 404 Not Found
+Sent request at 2021-03-11 08:51:29.600613
+
+Get request at 2021-03-11 08:51:41.404349
+Type of Request - GET . To adress - test_data/1.jpeg
+Status of Request - HTTP/1.0 200 OK - send Photo
+Sent request at 2021-03-11 08:51:41.405821
+

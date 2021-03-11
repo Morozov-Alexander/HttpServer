@@ -14,7 +14,10 @@ def ResponseDecor(func):
         saveInfoToFile(info)
 
         rezult = func(*args, **kwargs)
-        status = rezult.decode().split("\n")[0]
+        try:
+            status = rezult.decode().split("\n")[0]
+        except:
+            status = "HTTP/1.0 200 OK - send Photo"
 
         info = "Status of Request - " + status + "\n"
         info += "Sent request at " + str(datetime.now()) + "\n"
