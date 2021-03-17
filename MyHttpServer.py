@@ -2,8 +2,9 @@ import socket
 import yaml
 import json
 from loger import *
-
+import os
 class MyHttpServer:
+    
     __slots__ = ('_domain', '_port', '_path', 'server_socket')
 
     def __init__(self,port=8000, path='/home/alex', domain = "localhost"):

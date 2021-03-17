@@ -23,8 +23,7 @@ def ResponseDecor(func):
         info += "Sent request at " + str(datetime.now()) + "\n"
         saveInfoToFile(info)
         return rezult
-
-    
+        
     return inner
 
 

@@ -1,16 +1,3 @@
-Get request at 2021-03-10 22:33:35.999759
-Type of Request - GET . To adress - test_data/1.jhtml
-Status of Request - HTTP/1.1 404 Not Found
-Sent request at 2021-03-10 22:33:36.000314
-Get request at 2021-03-10 22:33:41.285813
-Type of Request - GET . To adress - test_data/1.html
-Status of Request - HTTP/1.0 200 OK
-Sent request at 2021-03-10 22:33:41.286216
-Get request at 2021-03-10 22:34:12.191010
-Type of Request - POST . To adress - index.html
-Status of Request - HTTP/1.0 200 OK
-Sent request at 2021-03-10 22:34:12.193311
-
 Get request at 2021-03-10 22:34:23.952066
 Type of Request - POST . To adress - index.html
 Status of Request - HTTP/1.0 200 OK
@@ -110,4 +97,104 @@ Get request at 2021-03-11 08:51:41.404349
 Type of Request - GET . To adress - test_data/1.jpeg
 Status of Request - HTTP/1.0 200 OK - send Photo
 Sent request at 2021-03-11 08:51:41.405821
+
+Get request at 2021-03-15 19:12:50.296316
+Type of Request - GET . To adress - 
+Status of Request - HTTP/1.1 404 Not Found
+Sent request at 2021-03-15 19:12:50.298875
+
+Get request at 2021-03-15 19:12:51.374101
+Type of Request - GET . To adress - favicon.ico
+Status of Request - HTTP/1.1 404 Not Found
+Sent request at 2021-03-15 19:12:51.374436
+
+Get request at 2021-03-15 19:12:58.107101
+Type of Request - GET . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-15 19:12:58.107502
+
+Get request at 2021-03-15 19:13:03.018953
+Type of Request - POST . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-15 19:13:03.020286
+
+Get request at 2021-03-15 19:13:51.210087
+Type of Request - GET . To adress - test_data/1.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-15 19:13:51.210473
+
+Get request at 2021-03-15 19:14:10.364137
+Type of Request - GET . To adress - test_data/1.jpeg
+Status of Request - HTTP/1.0 200 OK - send Photo
+Sent request at 2021-03-15 19:14:10.365572
+
+Get request at 2021-03-15 19:14:15.470556
+Type of Request - GET . To adress - test_data/1.jpg
+Status of Request - HTTP/1.0 200 OK - send Photo
+Sent request at 2021-03-15 19:14:15.471858
+
+Get request at 2021-03-15 19:37:04.374027
+Type of Request - GET . To adress - test_data/1.jpeg
+Status of Request - HTTP/1.0 200 OK - send Photo
+Sent request at 2021-03-15 19:37:04.374873
+
+Get request at 2021-03-15 19:38:32.605338
+Type of Request - GET . To adress - 
+Status of Request - HTTP/1.1 404 Not Found
+Sent request at 2021-03-15 19:38:32.605591
+
+Get request at 2021-03-15 19:38:48.872339
+Type of Request - GET . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-15 19:38:48.872702
+
+Get request at 2021-03-15 19:44:12.170308
+Type of Request - POST . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-15 19:44:12.172592
+
+Get request at 2021-03-16 15:28:03.191072
+Type of Request - GET . To adress - 
+Status of Request - HTTP/1.1 404 Not Found
+Sent request at 2021-03-16 15:28:03.191428
+
+Get request at 2021-03-16 15:28:03.848832
+Type of Request - GET . To adress - favicon.ico
+Status of Request - HTTP/1.1 404 Not Found
+Sent request at 2021-03-16 15:28:03.849076
+
+Get request at 2021-03-16 15:28:08.729817
+Type of Request - GET . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-16 15:28:08.730115
+
+Get request at 2021-03-16 15:28:13.002542
+Type of Request - POST . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-16 15:28:13.004670
+
+Get request at 2021-03-16 15:28:16.125601
+Type of Request - GET . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-16 15:28:16.126164
+
+Get request at 2021-03-16 15:28:21.884598
+Type of Request - POST . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-16 15:28:21.885660
+
+Get request at 2021-03-16 15:28:48.633086
+Type of Request - GET . To adress - index.html
+Status of Request - HTTP/1.0 200 OK
+Sent request at 2021-03-16 15:28:48.633352
+
+Get request at 2021-03-16 15:28:49.226476
+Type of Request - GET . To adress - favicon.ico
+Status of Request - HTTP/1.1 404 Not Found
+Sent request at 2021-03-16 15:28:49.226823
+
+Get request at 2021-03-16 15:28:54.218925
+Type of Request - GET . To adress - index.html?first=as&second=as
+Status of Request - HTTP/1.1 404 Not Found
+Sent request at 2021-03-16 15:28:54.219274
 
